@@ -1,5 +1,5 @@
-@import 'vars';
-@import 'mixins';
+// @import 'vars';
+// @import 'mixins';
 
 // .reset {
 //     padding: 0;
@@ -14,31 +14,45 @@
 //     background-color: $bgColor;
 // }
 
-body, p{
-    @include reset
-}
+// body, p{
+//     @include reset
+// }
 
-.main{
-    background-color: $bgColor;
-    .child{
-        margin: 4px;
-        border: 2px solid $mainColor;
+// .main{
+//     background-color: $bgColor;
+//     .child{
+//         margin: 4px;
+//         border: 2px solid $mainColor;
 
-        p{
-            @include addPadding(20px);
-            display: block;
+//         p{
+//             @include addPadding(20px);
+//             display: block;
             
-            @if $mainColor == #f00 {
-                color: $mainColor;
-            } @else {
-                background-color: $mainColor;
-            }
-        }
-    }
+//             @if $mainColor == #f00 {
+//                 color: $mainColor;
+//             } @else {
+//                 background-color: $mainColor;
+//             }
+//         }
+//     }
+// }
+
+// @for $val from 2 through 10 {
+//     .font-size-#{$val} {
+//         font-size: 10px + $val*3;
+//     }
+// }
+
+.main p{
+    background-color: #faa;
+    padding: 10px;
 }
 
-@for $val from 2 through 10 {
-    .font-size-#{$val} {
-        font-size: 10px + $val*3;
-    }
+
+.main > p {
+    color: blue;
+}
+
+.child+p{
+    border: 2px solid black;
 }
