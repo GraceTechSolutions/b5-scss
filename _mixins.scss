@@ -1,0 +1,11 @@
+
+@mixin addPadding($unit: 10px) {
+    padding: $unit $unit*1.5;
+}
+
+@mixin reset {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+}
